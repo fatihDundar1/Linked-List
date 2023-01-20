@@ -15,7 +15,7 @@ public class LinkedList {
 	}
 
 	
-	static void baþtanEkle(int data) {
+	static void bastanEkle(int data) {
 		
 		Node newNode=new Node(data);
 		newNode.next=head;
@@ -25,16 +25,16 @@ public class LinkedList {
 	
 
 	
-	static void ortalardanEkle(Node öncekiNode,int data) {
+	static void ortalardanEkle(Node Ã¶ncekiNode,int data) {
 		
-		if(öncekiNode==null) {
-			System.out.println("önceki Node yok");
+		if(Ã¶ncekiNode==null) {
+			System.out.println("Ã¶nceki Node yok");
 			return;
 		}
 		
 		Node newNode=new Node(2);
-		newNode.next=öncekiNode.next;
-		öncekiNode.next=newNode;
+		newNode.next=Ã¶ncekiNode.next;
+		Ã¶ncekiNode.next=newNode;
 		
 	}
 	
@@ -63,13 +63,13 @@ public class LinkedList {
 	}
 	
 
-    static void deleteBaþtan() {
+    static void deleteBaÃ¾tan() {
     	head=head.next;
     }
     
-   static void deleteOrtadan(Node ÖncekiNode, Node SonrakiNode) {
+   static void deleteOrtadan(Node Ã–ncekiNode, Node SonrakiNode) {
     
-    ÖncekiNode.next=SonrakiNode;
+    Ã–ncekiNode.next=SonrakiNode;
     }
     
     
@@ -78,11 +78,11 @@ public class LinkedList {
 	
 	LinkedList list=new LinkedList();	
 		
-    baþtanEkle(1);
-	baþtanEkle(2);
-	baþtanEkle(3);
+    baÃ¾tanEkle(1);
+	baÃ¾tanEkle(2);
+	baÃ¾tanEkle(3);
 	traverseORprint();
-	deleteBaþtan();
+	deleteBaÃ¾tan();
 	sondanEkle(0);
 	traverseORprint();
 	}
