@@ -39,18 +39,36 @@ public class LinkedList {
 	}
 	
 	
-    static void sondanEkle(int data) {
+	 static void BulVeEkle(int j,int data) {
+	   
+	        Node iterator=head;
+	   
+	        while(iterator.next!=null) {
+		   
+		     if(iterator.data==j) {
+			   
+			   Node newNode=new Node(data);
+			   newNode.next=iterator.next;
+			   iterator.next=newNode;
+		     }
+		   
+		   iterator=iterator.next; 
+	        }
+         }
+	
+	
+        static void sondanEkle(int data) {
     	
-    	Node sonNode=new Node(data);
-    	sonNode.next=null;
+    	       Node sonNode=new Node(data);
+    	       sonNode.next=null;
     	
-    	Node tnode=head;
-    	while(tnode.next!=null)
-    		tnode=tnode.next;
+    	       Node tnode=head;
+    	       while(tnode.next!=null)
+    		      tnode=tnode.next;
     	
-    	tnode.next=sonNode;
+    	       tnode.next=sonNode;
     	
-    }
+        }
 	
 	static void traverseORprint() {
 		Node tnode=head;
@@ -63,28 +81,43 @@ public class LinkedList {
 	}
 	
 
-    static void deleteBaþtan() {
+        static void deleteBastan() {
     	head=head.next;
-    }
+         }
     
-   static void deleteOrtadan(Node ÖncekiNode, Node SonrakiNode) {
+        static void deleteOrtadan(Node ÖncekiNode, Node SonrakiNode) {
     
-    ÖncekiNode.next=SonrakiNode;
-    }
+         ÖncekiNode.next=SonrakiNode;
+         }
     
+	
+	static void sondanSil() {
+		
+	       Node iterator=head;
+	   
+	        while(iterator.next.next!=null) {
+		      iterator=iterator.next;
+	        }
+	   
+	        iterator.next=null;
+   }
     
     
 	public static void main(String[] args) {
 	
-	LinkedList list=new LinkedList();	
 		
-    baþtanEkle(1);
-	baþtanEkle(2);
-	baþtanEkle(3);
+		
+        bastanEkle(4);	
+        bastanEkle(3);
+	bastanEkle(2);
+	bastanEkle(1);
 	traverseORprint();
-	deleteBaþtan();
-	sondanEkle(0);
+	deleteBastan();
+	sondanEkle(6);
+	BulVeEkle(4, 5);
+	sondanSil();
 	traverseORprint();
+		
 	}
 	
 }
