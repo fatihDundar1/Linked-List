@@ -82,24 +82,39 @@ public class LinkedList {
 	
 
         static void deleteBastan() {
-    	head=head.next;
+		
+    	      head=head.next;
          }
     
         static void deleteOrtadan(Node ÖncekiNode, Node SonrakiNode) {
     
-         ÖncekiNode.next=SonrakiNode;
-         }
+               ÖncekiNode.next=SonrakiNode;
+        }
     
+	
+	static void BulVeSilOrtadan(int silinecekNodeDatası) {
+    	
+         Node iterator=head;
+    	 while(iterator.next.data!=silinecekNodeDatası) {
+ 			
+    		iterator=iterator.next;
+    			
+         }
+    		
+    	        iterator.next=iterator.next.next;
+    	}
+	
 	
 	static void sondanSil() {
 		
 	       Node iterator=head;
 	   
-	        while(iterator.next.next!=null) {
+	       while(iterator.next.next!=null) {
+		       
 		      iterator=iterator.next;
 	        }
 	   
-	        iterator.next=null;
+	       iterator.next=null;
    }
     
     
@@ -116,6 +131,7 @@ public class LinkedList {
 	sondanEkle(6);
 	BulVeEkle(4, 5);
 	sondanSil();
+	BulVeSilOrtadan(4);
 	traverseORprint();
 		
 	}
